@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 700px; 
+            margin: 0 auto;
+        }
+
+        .navbar {
+            background-color: #f4f4f4;
+            padding: 10px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .heading {
+            color: blue;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .main-content {
+            padding: 1rem;
+        }
+        .message{
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        footer {
+            text-align: center;
+            color: gray;
+            margin-top: 15px;
+        }
+        .section {
+            padding: 5px;
+            color: #333;
+            text-align: justify;
+        }
+        li{
+            padding: 2px 5px;
+            margin-left:1rem;
+            list-style-type: disc;
+        }
+
+        .subsection {
+            margin-top: 1vh;
+            font-size: 1rem;
+            text-decoration: underline; 
+        }
+
+        .key {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <h2 class="heading">TensorBlue</h2>
+        </nav>
+        <div class="main-content">
+            <div class="message">
+                <p>Dear {{userName}},</p>
+                <p>It was a pleasure speaking with you. Your project idea is truly inspiring, and we are excited about the prospect of working together to bring it to fruition.</p>
+                <p>Our team is dedicated to delivering high-quality results, and we look forward to the opportunity to contribute to the success of your project. Your vision aligns perfectly with our expertise, and we are eager to commence work on your project promptly.</p>
+                <p>Below are some key points from our discussion:</p>
+            </div>
+            {{{report}}}
+        </div>
+        <footer>
+            <h4>TensorBlue: Disrupt the Word!</h4>
+        </footer>
+    </div>
+</body>
+</html>
