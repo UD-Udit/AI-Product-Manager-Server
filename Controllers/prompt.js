@@ -1,6 +1,4 @@
 import OpenAI from "openai";
-import axios from "axios"
-import path from "path";
 import nodemailer from "nodemailer";
 import Handlebars from "handlebars";
 import fs from "fs";
@@ -96,7 +94,7 @@ function generateHTMLReport(summary) {
 
 
 function compileTemplate(data) {
-  const mailTemplate = fs.readFileSync("templates/mailTemplate.html", "utf-8").toString();
+  const mailTemplate = fs.readFileSync("../templates/mailTemplate.html", "utf-8").toString();
   const template = Handlebars.compile(mailTemplate);
   return template(data);
 }
