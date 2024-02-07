@@ -2,6 +2,10 @@ import OpenAI from "openai";
 import nodemailer from "nodemailer";
 import Handlebars from "handlebars";
 import fs from "fs";
+import path from 'path';
+import { fileURLToPath } from "url";
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
 
 export const  sendMsgToOpenAI = async(req, res) => {
   try{
@@ -94,7 +98,9 @@ function generateHTMLReport(summary) {
 
 
 function compileTemplate(data) {
-  const mailTemplate = fs.readFileSync("../templates/mailTemplate.html", "utf-8").toString();
+  const templatePath = path.join(__dirname, '..', 'Templates', 'mailTemplate.html');
+
+  const mailTemplate = fs.readFileSync(templatePath, "utf-8").toString();
   const template = Handlebars.compile(mailTemplate);
   return template(data);
 }

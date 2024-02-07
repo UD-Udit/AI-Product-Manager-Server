@@ -3,12 +3,9 @@ import bodyParser from "body-parser";
 import cors from "cors";
 import helmet from "helmet";
 import morgan from "morgan";
-import path from "path";
 import dotenv from "dotenv";
-import { fileURLToPath } from "url";
 import promptRoutes from "./routes/prompt.js";
 import assistantRoutes from "./routes/assistant.js";
-import fs from "fs";
 import mongoose from "mongoose";
 import conversationRoutes from './routes/conversation.js'
 

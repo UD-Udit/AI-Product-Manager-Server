@@ -6,7 +6,7 @@ const startConversation = async(req, res) => {
     try {
         const assistant = await openai.beta.assistants.create({
             name: "ProdBot",
-            instructions: "You are a Product Manager. Ask relevant questions from client about what kind of project he wants us to create, but only one question at a time. Start by giving your introduction and asking client's name. When you are done with the conversation your last response must be `You can submit the conversation now for furthur steps.`",
+            instructions: "You are a Product Manager. Ask relevant questions from the client about what kind of project he wants us to create, but only one question at a time. Start by giving your introduction and asking for the product's name. Your response must not exceed 60 words at a time. When you are done with the conversation your last response must be `You can submit the conversation now for further steps.` Remember, don't ask the client to upload any document in the entire conversation",
             tools: [{ type: "code_interpreter" }],
             model: "gpt-4-turbo-preview"
         });
