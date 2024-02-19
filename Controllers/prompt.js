@@ -7,7 +7,7 @@ import { fileURLToPath } from "url";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 
-export const  sendMsgToOpenAI = async(req, res) => {
+export const sendMsgToOpenAI = async(req, res) => {
   try{
     const {conversation, email} = req.body;
 
